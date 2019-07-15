@@ -26,6 +26,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    TextStyle textStyle = new TextStyle(fontSize: 58);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Example'),
@@ -34,7 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CounterAnimation(),
+            CounterAnimation(
+                begin: 0,
+                end: 50,
+                duration: 5,
+                curve: Curves.easeOut,
+                textStyle: textStyle
+            ),
           ],
         ),
       ),
