@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:counter_animation/counter_animation.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,21 +22,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: new AppBar(
-        centerTitle: true,
-        title: Text('Example animation'),
-      ),
-      body: Column(
-        children: <Widget>[
-          Row(
-            children: <Widget>[
 
-            ],
-          )
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Example'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CounterAnimation(),
+          ],
+        ),
       ),
     );
   }
