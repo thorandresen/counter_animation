@@ -1,6 +1,6 @@
 name: counter_animation
 description: A very simple (50 lines of code, see Git rep) flutter package for animating a counter that decrements or increments an integer.
-version: 0.0.1
+version: 0.0.2
 author: Thor Garske Andresen<thorg3@gmail.com>
 homepage: https://github.com/thorandresen/counter_animation
 
