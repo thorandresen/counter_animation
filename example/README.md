@@ -1,16 +1,29 @@
-# example
+# counter_animation
 
-A new Flutter project.
+A very simple (50 lines of code, see Git rep) flutter package for animating a counter that decrements or increments an integer.
 
-## Getting Started
+The package can be tweaked with duration.
 
-This project is a starting point for a Flutter application.
+## Usage
 
-A few resources to get you started if this is your first Flutter project:
+To use this plugin, add `counter_animation` as dependency to pubspec.yaml file.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Example
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The code below shows an integer that counts up to 50, while easing out.
+
+```
+import 'package:flutter/material.dart';
+import 'package:counter_animation/counter_animation.dart';
+
+CounterAnimation(
+    begin: 0,
+    end: 50,
+    duration: 5,
+    curve: Curves.easeOut,
+    textStyle: textStyle
+),
+```
+
+#### Example gif
+![](counteranimation.gif) 

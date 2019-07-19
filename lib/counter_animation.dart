@@ -12,21 +12,21 @@ class CounterAnimationState extends State<CounterAnimation>
   void initState() {
     super.initState();
 
-    _animationController =
-        AnimationController(duration: Duration(seconds: widget.duration), vsync: this);
+    _animationController = AnimationController(
+        duration: Duration(seconds: widget.duration), vsync: this);
     _animation = IntTween(begin: widget.begin, end: widget.end).animate(
         CurvedAnimation(parent: _animationController, curve: widget.curve));
 
     _animationController.forward();
   }
 
+  /// The build method, which returns an [AnimatedBuilder], with the animation.
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _animationController,
         builder: (BuildContext context, Widget child) {
-          return Text(_animation.value.toString(),
-              style: widget.textStyle);
+          return Text(_animation.value.toString(), style: widget.textStyle);
         });
   }
 }
@@ -45,10 +45,10 @@ class CounterAnimation extends StatefulWidget {
     @required this.curve,
     @required this.duration,
     this.textStyle,
-  }) : assert(begin != null),
-  assert(end != null),
-  assert(curve != null),
-  assert(duration != null);
+  })  : assert(begin != null),
+        assert(end != null),
+        assert(curve != null),
+        assert(duration != null);
 
   @override
   CounterAnimationState createState() => new CounterAnimationState();
